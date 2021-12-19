@@ -7,7 +7,7 @@ POST {{baseUrl}}/products/
 Content-Type: application/json
 
 {
-  "title": "овощ",
+  "title": "Помидор2",
   "description": "Лучшие на рынке"
 }
 
@@ -53,12 +53,12 @@ Content-Type: application/json
   "address": "мой address",
   "positions": [
     {
-      "product": 2,
+      "product": 1,
       "quantity": 250,
       "price": 120.50
     },
     {
-      "product": 3,
+      "product": 2,
       "quantity": 100,
       "price": 180
     }
@@ -67,20 +67,25 @@ Content-Type: application/json
 
 ###
 
+# создание склада
+GET {{baseUrl}}/stocks/1/
+Content-Type: application/json
+
+###
 # обновляем записи на складе
-PATCH {{baseUrl}}/stocks/4/
+PATCH {{baseUrl}}/stocks/1/
 Content-Type: application/json
 
 {
   "positions": [
     {
       "product": 2,
-      "quantity": 100,
+      "quantity": 2222,
       "price": 130.80
     },
     {
-      "product": 3,
-      "quantity": 243,
+      "product": 4,
+      "quantity": 222,
       "price": 145
     }
   ]
